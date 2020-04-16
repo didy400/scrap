@@ -37,3 +37,8 @@ end
 
   puts townhall_email
 #end
+
+email_by_townhall = HASH[town_name.zip(townhall_email)]
+email_by_townhall.each do |town_name, townhall_email|
+    puts town_name + ':' + townhall_email
+end
