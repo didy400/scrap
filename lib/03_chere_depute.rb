@@ -10,7 +10,7 @@ page = Nokogiri::HTML(URI.open('http://www2.assemblee-nationale.fr/deputes/liste
 
 #def get_names(name_deputees)
     page.css("div.col-container > ul > li > a").each do |node|
-   name_deputees.push(node.content)
+  # name_deputees.push(node.content)
   end
 #end
 
@@ -30,7 +30,7 @@ url_deputees.each do |url|
     page = Nokogiri::HTML(URI.open(url))
     page.css(".deputes-liste-attributs > dd:nth-child(8) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1)").each do |node|
         mails_deputees.push(node.content)
-        puts mails_deputees
+        #puts mails_deputees
     end
 end
 
