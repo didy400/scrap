@@ -18,12 +18,12 @@ require 'rubygems'
 puts crypto_keys
 
 
-      page.css('tr.cmc-table-row  > td:nth-child(5) > a').each do |node|
+      page.css('tr.cmc-table-row  > td:nth-child(3) > div').each do |node|
        crypto_values.push(node.content)
       end
 
 
-      cryptocurrencies_hash = Hash[crypto_keyz.zip(crypto_values)]
+      cryptocurrencies_hash = Hash[crypto_keys.zip(crypto_values)]
 
       cryptocurrencies_hash.each do |key, value|
         puts key + ' : ' + value
