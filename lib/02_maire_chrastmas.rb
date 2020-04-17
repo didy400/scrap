@@ -10,13 +10,13 @@ town_url = []
 
 page = Nokogiri::HTML(URI.open('http://annuaire-des-mairies.com/val-d-oise.html'))
 
-def get_town_name
+#def get_town_name
     
     page.css('a.lientxt').each do |node|
         town_name.push(node.content)
     end
     puts town_name
-end
+#end
 
 #def get_townhall_url
     page.css('a.lientxt').each do |node|
