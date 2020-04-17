@@ -33,6 +33,13 @@ url_deputees.each do |url|
         puts mails_deputees
     end
 end
+
+
     
 #end
-
+# def get_hash
+    email_by_deputees = HASH[name_deputees.zip(mails_deputees)]
+    email_by_deputees.each do |name_deputees, mails_deputees|
+        puts name_deputees + ':' + mails_deputees
+end
+#end
